@@ -26,15 +26,57 @@ A RESTful API built with Laravel for managing tasks. The API allows users to cre
 - **Request Body**:
   ```json
   {
-    "name": "John Doe",
-    "email": "john@example.com",
-    "password": "password123"
+    "name": "Test User",
+    "email": "testuser@example.com",
+    "password": "passwd123"
   }
+  ```
 
-  - **Request Body**:
+  - **Response**:
   ```json
   {
-    "name": "John Doe",
-    "email": "john@example.com",
-    "password": "password123"
+    "token": "JWT_TOKEN"
   }
+  ```
+
+  ### 2. User Login
+- **Endpoint**: `POST /api/login`
+- **Request Body**:
+  ```json
+  {
+    "email": "testUser@example.com",
+      "password": "passwd123"
+  }
+  ```
+
+  - **Response**:
+  ```json
+  {
+    "token": "JWT_TOKEN"
+  }
+  ```
+
+   ### 2. Create Task
+- **Endpoint**: `POST /api/tasks`
+- **Request Body**:
+  ```json
+  {
+      "title": "Create New Task",
+      "description": "Test adding new task",
+      "due_date": "2025-01-15",
+      "priority": "high"
+  }
+  ```
+
+  - **Response**:
+  ```json
+  {
+      "id": 1,
+      "title": "Complete the project",
+      "description": "Finalize all remaining tasks",
+      "due_date": "2025-01-15",
+      "priority": "high",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+  }
+  ```
