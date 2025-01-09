@@ -30,3 +30,11 @@ A RESTful API built with Laravel for managing tasks. The API allows users to cre
     "email": "john@example.com",
     "password": "password123"
   }
+
+  - **Request Body**:
+  ```json
+  {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "password123"
+  }
